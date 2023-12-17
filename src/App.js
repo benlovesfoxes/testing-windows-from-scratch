@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AiFillWindows } from 'react-icons/ai';
 
 const Container = styled.div`
   display: flex;
@@ -51,7 +50,7 @@ const App = () => {
       <Window>
         <TitleBar>
           <Title>My Windows 10 Remake</Title>
-          <AiFillWindows size={20} />
+          <span>⊞</span>
         </TitleBar>
         <Content>
           <p>Welcome to my Windows 10 remake!</p>
