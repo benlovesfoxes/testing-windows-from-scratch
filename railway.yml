@@ -1,0 +1,11 @@
+# railway.yml
+
+version: 2
+env: production
+
+build:
+  command: pnpm run build
+
+routes:
+  - src: /api/.* # Proxy all requests to the /api endpoint to the backend
+
