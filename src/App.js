@@ -44,16 +44,60 @@ const Content = styled.div`
   padding: 16px;
 `;
 
+const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+`;
+
+const Button = styled.button`
+  padding: 8px 16px;
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const ResetPasswordLink = styled.a`
+  color: #0078d7;
+  text-decoration: none;
+  margin-top: 16px;
+  cursor: pointer;
+`;
+
 const App = () => {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    // Handle login logic here
+  };
+
+  const handleResetPassword = () => {
+    // Handle reset password logic here
+  };
+
   return (
     <Container>
       <Window>
         <TitleBar>
-          <Title>My Windows 10 Remake</Title>
+          <Title>Windows 11 Login</Title>
           <span>⊞</span>
         </TitleBar>
         <Content>
-          <p>Welcome to my Windows 10 remake!</p>
+          <LoginForm onSubmit={handleLogin}>
+            <Input type="text" placeholder="Username" />
+            <Input type="password" placeholder="Password" />
+            <Button type="submit">Login</Button>
+            <ResetPasswordLink onClick={handleResetPassword}>
+              Reset Password
+            </ResetPasswordLink>
+          </LoginForm>
         </Content>
       </Window>
     </Container>
